@@ -370,31 +370,59 @@
 # in the code above 'shit ' is a  useless variable so its not needed in codeblocks irl. 
 # most devs just use '_'(underscore) ill share a example under here
 
-my_list = [1,2,3,4,5,6,7,8,9,10,5,6,7,8,8]
+# my_list = [1,2,3,4,5,6,7,8,9,10,5,6,7,8,8]
 
-counter = 0
-number_of_items = 0
-for numbers in my_list:
-    number_of_items = number_of_items + 1;
-    counter = counter + numbers ;
-print(number_of_items)
-print(counter)
+# counter = 0
+# number_of_items = 0
+# for numbers in my_list:
+#     number_of_items = number_of_items + 1;
+#     counter = counter + numbers ;
+# print(number_of_items)
+# print(counter)
 
-# the above code works well. also the one below
-for number in range(4):
-    print(list(range(6)))
+# # the above code works well. also the one below
+# for number in range(4):
+#     print(list(range(6)))
 
-picture = [
-    [0,0,0,1,0,0,0,],
-    [0,0,1,1,1,0,0,],
-    [0,1,1,1,1,1,0,],
-    [0,0,0,1,0,0,0,],
-    [0,0,0,1,0,0,0,],
-]
-for row in picture:
-    for number in row:
-        if number == 1:
-             print('*', end=' ')
-        else:
-            print(' ', end=' ')
-    print('I am the best ')
+# picture = [
+#     [0,0,0,1,0,0,0,],
+#     [0,0,1,1,1,0,0,],
+#     [0,1,1,1,1,1,0,],
+#     [0,0,0,1,0,0,0,],
+#     [0,0,0,1,0,0,0,],
+# ]
+# for row in picture:
+#     for number in row:
+#         if number == 1:
+#              print('*', end=' ')
+#         else:
+#             print(' ', end=' ')
+#     print('I am the best ')
+
+def sum_numbers(a, b):
+    return a + b
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+result = sum_numbers(a, b)
+print(f"The sum of {a} and {b} is {result}")
+
+my_first_function
+def test_func():
+    y = int(input('Enter a number: '))
+    print(f' Your test function number is {y}')
+    return y
+
+print(f'So i said earlier is {test_func()}')
+
+def double(x):
+    y = x * 2
+    return y, x
+    
+x = int(input('Enter a number to double: '))
+result, original_number = double(x)
+print(f'The double of {original_number} is {result}')
+print(f'The result is {result}')
+
+c = 4j
+print(c)
