@@ -1,3 +1,4 @@
+import os
 # name = input ('Richmond Olorunsogo?')
 # print ('Welcome',name)
 
@@ -288,9 +289,9 @@
 
 #sets -   unordered collection of unique objects.
 # set_akoko = {2,6,0,3,2,5,5,9,6,2,5,2,8,8,1,6,5,8,3,8,9,1,0,0,3,4,4,3,8,7}
-# print(len(set_akoko))
+# # print(len(set_akoko))
 
-# print(set_akoko)
+# print(set_akoko.pop())
 
 #program to convert list to set.
 # my_list = [1,2,3,4,5,5]
@@ -399,30 +400,212 @@
 #             print(' ', end=' ')
 #     print('I am the best ')
 
-def sum_numbers(a, b):
-    return a + b
+# def sum_numbers(a, b):
+#     return a + b
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-result = sum_numbers(a, b)
-print(f"The sum of {a} and {b} is {result}")
+# a = int(input("Enter first number: "))
+# b = int(input("Enter second number: "))
+# result = sum_numbers(a, b)
+# print(f"The sum of {a} and {b} is {result}")
 
-my_first_function
-def test_func():
-    y = int(input('Enter a number: '))
-    print(f' Your test function number is {y}')
-    return y
+# my_first_function
+# def test_func():
+#     y = int(input('Enter a number: '))
+#     print(f' Your test function number is {y}')
+#     return y
 
-print(f'So i said earlier is {test_func()}')
+# print(f'So i said earlier is {test_func()}')
 
-def double(x):
-    y = x * 2
-    return y, x
+# def double(x):
+#     y = x * 2
+#     return y, x
     
-x = int(input('Enter a number to double: '))
-result, original_number = double(x)
-print(f'The double of {original_number} is {result}')
-print(f'The result is {result}')
+# x = int(input('Enter a number to double: '))
+# result, original_number = double(x)
+# print(f'The double of {original_number} is {result}')
+# print(f'The result is {result}')
 
-c = 4j
-print(c)
+# c = 4j
+# print(c)
+
+# print(4>5 and 4<5)
+
+# list = [1,2,3,4,5]
+# list_4 = [list, 'unicorn', 3.14, True, None, 4+3j]
+# print(list_4)
+# print(type(list_4))
+
+# def test_personal_owanbe(cloth_to_wear):
+#     print(f'Today i will wear {cloth_to_wear}')
+    
+# test_personal_owanbe('Maggie Fisher and cap')
+
+# def personal_info(name, age, address):
+#     print(f'My name is {name}, i am {age} years old and i live in {address}')
+    
+# personal_info('Nelle Hudson', 62, '1405 Beztor Path Apt. 123 New York, NY 10001')
+
+
+# def my_func(fname="Johanna Casey"):
+#  print(f"Hey {fname}")
+# my_func()
+
+# class car:
+#     def __init__(self, make, model, year):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+
+#     def get_info(self):
+#         return f"{self.year} {self.make} {self.model}"
+    
+# my_car = car("Toyota", "Camry", 2020)
+# print(my_car.get_info())
+# print(my_car.make), print(my_car.model), print(my_car.year)
+
+# your_car = car("Honda", "Civic", 2018)
+# print(your_car.get_info())
+# print(your_car.make), print(your_car.model), print(your_car.year)
+
+# class Car:
+#     hp = 856
+#     color = 'blue'
+    
+# carl = Car()
+# car2 = Car()
+# carl.hp = 900
+# car2.color = 'red'
+# print(carl.hp)
+# print(carl.color)
+
+# print(car2.hp)
+# print(car2.color)
+
+''' error  handling'''
+
+# try:
+#     age = int(input('Enter your age: '))
+#     if age < 0:
+#         raise ValueError("Age cannot be negative.")
+#     print(f'Your age is {age}')
+# except ValueError as ve:
+#     print(f'Invalid input: {ve}')
+
+#  exercise try to get duplicate values in a list. imma say i tried my best
+# some_list = [ 'a', 'b', 'c', 'b', 'd', 'd', 'm', 'n', 'n']
+
+# doppleganger = []
+# for duplicate_element in some_list:
+#     if some_list.count(duplicate_element) > 1:
+#         doppleganger.append(duplicate_element)
+# print(doppleganger[::2])
+
+# this is the start of my learning of functions
+
+# # this below is a parameter in functions        
+# def say_ciao_to_user(user,vehicle_purchased): 
+#     ''' This function says ciao to the user and indicates the vehicle they purchased.'''
+#     print(f'ciao {user}. hope you enjoy your new {vehicle_purchased}')
+    
+
+    
+# # this below is an argument in functions 
+# # in fact to be precise its a  postional argument 
+# say_ciao_to_user('Moyo','BMW e30')
+# say_ciao_to_user('Lloyd Medina', 'Starlight')
+
+# # this is now a keyword argument where the position does not matter because you've defined the paramenter as a variable already. take this example.
+# say_ciao_to_user(user='Moyo', vehicle_purchased='Starlight')
+# # however this is bad dev PRACTICE due to the fact that im over complicating matters. 
+
+# # now to show default parameters ill define another function
+
+# def result_checker(name, grade='A'):
+#     '''this function prints the name and grade of a student.'''  
+#     # now sire this right up here is called a docstring and it is used to give some info on your function to you the dev and your team or people connected with the code.
+#     # now look to some lines below. it should be under print total. im going to show ways to access the docstring of a function
+#     print(f'Hi, {name}, your grade is {grade} ')
+    
+# # now here grade is used as a parameter but the default is A.
+
+# # so if i just call the function result checker
+# result_checker('moyo') 
+# # because default grade is A it just gave me hi moyo your grade is A
+
+
+# # take note
+# # functions:
+#     # Should do one thing really well.
+#     # Should return something.
+    
+# def sum(n4,n5):
+#     '''This function adds two integers together. Lobatan.'''
+#     def sum_again(n6,n7):
+#         return n6 + n7
+#     return sum_again(n4,n5)
+
+# total = sum(5,7)
+# print(total)
+
+# # WAYS TO ACCESS THE DOCSTRING Of A fUNCTION
+# # YOU CAN USE:
+# #     help(function you want to get help on. example below)
+# print(help(sum))
+# # or you can use
+# print(sum.__doc__)
+
+# def is_odd_or_even(num):
+#     if num % 2 == 0:
+#         return True
+#     else:
+#         return False
+
+# print(is_odd_or_even())
+
+# # there is a way to clean up this code. now this is how to be a better dev. write  the shortest possible code without sacrificing clarity.
+# def is_odd_or_even_clean_code(num):
+#     return num % 2 == 0
+
+
+ # *args **kwargs
+# that star allows me to add as many things as i like to the function
+# def super_func(*args):
+#     print(args)
+#     return sum(args)
+# print(super_func(1,2,3,4,51))
+
+# # *args **kwargs
+# def super_func(name, *args, i='hi' ,**kwargs):
+#     total = 0
+#     for items in kwargs.values():
+#         total += items
+#     return sum(args) + total
+# print(super_func(1,2,3,4,5, num1=5, num2=1) )
+#Rule: params, *args, default palrameters, **kwargs that is the order in which they are to be used when defining a function. why? because python reads from top to bottom. this is important to know. and everything from why? is ai generated. what i actually wanted to say  is that its quite like bodmas.
+
+# def highest_even(*numbers):
+#     even_num_list = []
+#     for even_num in numbers:
+#         if even_num % 2 == 0:
+#             even_num_list.append(even_num)
+#     return max(even_num_list)
+        
+# test = highest_even(4,5,6,7,44,56,76,77)
+# print(test)
+
+# walrus operator type shit
+if (b := len('ciao')) > 3:
+    print("Longer than 3")
+
+# some stuff about scope.
+
+def outer():
+    x = "local"
+    def inner():
+        nonlocal x
+        x = "nonlocal"
+        print ("inner:" , x)
+    inner()
+    print("outer:", x)
+    
+outer()
