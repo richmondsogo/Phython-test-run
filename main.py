@@ -1402,34 +1402,83 @@ import os
 
 # print(int_list)
 
-class daddyClass:
+# class daddyClass:
 
-    def console_string(self):
-        self.s = input()
+#     def console_string(self):
+#         self.s = input()
 
-    def printupper(self):
-        print(self.s.upper())
+#     def printupper(self):
+#         print(self.s.upper())
 
-import random
+# import random
 
 
 # good practice import only what you need
 
-print(random.randint(5,55))
-print(random.random())
-print(random.choice((5, 55, 5555, 555)))
-list_44 = [5, 55, 555, 5555, 55555]
-random.shuffle(list_44)
-print(list_44)
+# print(random.randint(5,55))
+# print(random.random())
+# print(random.choice((5, 55, 5555, 555)))
+# list_44 = [5, 55, 555, 5555, 55555]
+# random.shuffle(list_44)
+# print(list_44)
 
 
-import sys
-sys.argv
+# import sys
+# sys.argv
 
-to_do_one = sys.argv[1]
-to_do_two = sys.argv[2]
+# to_do_one = sys.argv[1]
+# to_do_two = sys.argv[2]
 
-item_one = int(to_do_one)
+# item_one = int(to_do_one)
 
-print(f'hope youve done {to_do_one} and {to_do_two}')
-print(type(item_one ))
+# print(f'hope youve done {to_do_one} and {to_do_two}')
+# print(type(item_one ))
+
+
+# import pyjokes
+
+# joke = pyjokes.get_joke("en", "neutral")
+
+# print(joke)
+
+# from collections import Counter, defaultdict, OrderedDict
+
+# list_444 = [4, 5, 6, 4, 4, 4, 7, 44, 55]
+# print(Counter(list_444))
+
+# sentence = "blah blah blah thinking bout u"
+# print(Counter(sentence))
+
+# dict = defaultdict(
+#     lambda: 5,
+#     {
+#         "a": 4,
+#         "b": 6,
+#     },
+# )
+# print(dict["v"])
+# # now onto ordered dict
+# d = OrderedDict()
+# d["a"] = 4
+# d["b"] = 5
+# d["c"] = 6
+
+# print(d)
+
+# e = {}
+# e["a"] = 4
+# e["b"] = 5
+# e["c"] = 6
+
+# print(e)
+
+# import datetime
+
+# print(datetime.time(5,45,6))
+# print(datetime.date.today())
+
+
+# from array import array
+
+# arr = array('i', [1,2,3,4,5])
+# print(arr)
