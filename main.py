@@ -1413,9 +1413,23 @@ class daddyClass:
 import random
 
 
+# good practice import only what you need
+
 print(random.randint(5,55))
 print(random.random())
 print(random.choice((5, 55, 5555, 555)))
 list_44 = [5, 55, 555, 5555, 55555]
 random.shuffle(list_44)
 print(list_44)
+
+
+import sys
+sys.argv
+
+to_do_one = sys.argv[1]
+to_do_two = sys.argv[2]
+
+item_one = int(to_do_one)
+
+print(f'hope youve done {to_do_one} and {to_do_two}')
+print(type(item_one ))
