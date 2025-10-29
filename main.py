@@ -1279,4 +1279,143 @@ import os
 # sum_result = sum_numbers("5", 10)
 # print(f"The sum of 5 and 10 is {sum_result}")
 
+# print(list(range(1,100)))
+# range(1,100)
 
+# def generator_function(num):
+#     for i in range(num):
+#         yield i
+# for item in generator_function(1000):
+#     print(item)
+
+# exercise fibonacci sequence with generator function
+
+# from time import time
+
+# def function_timer(fn):
+#     def wrapper(*args,**kwargs):
+#         t1 = time()
+#         result = fn(*args,**kwargs)
+#         t2 = time()
+#         print(f"took {t2-t1} seconds ")
+#         return result
+#     return wrapper
+
+# @function_timer
+# def fib(number):
+#     a = 0
+#     b = 1
+#     for i in range(number):
+#         yield a
+#         temp = a
+#         a = b
+#         b = temp + b
+# for item in fib(20):
+#     print(item)
+
+# @function_timer
+# def fib_list(num):
+#     a = 0
+#     b = 1
+#     result = []
+#     for i in range(num):
+#         result.append(a)
+#         temp = a
+#         a = b
+#         b = temp + b
+#     return result
+
+# print(fib_list(20))
+
+# Write a program which will find all such numbers which are divisible by 7
+# but are not a multiple of 5, between 2000 and 3200 (both included).
+# The numbers obtained should be printed in a comma-separated sequence on a single line.
+
+
+# for i in range(2000, 3201):
+#     if i % 7 == 0 and i % 5 != 0:
+#         print(i, end=",")
+# print("\b")
+
+
+# Write a program which can compute the factorial of a given numbers.
+# The results should be printed in a comma-separated sequence on a single line.
+# Suppose the following input is supplied to the program: 8 Then, the output should be:40320
+
+# def factorial(n):
+#     if n < 0:
+#         return "Factorial can't be negative"
+#     elif n == 0:
+#         return 1
+#     else:
+#         fact = 1
+#         for i in range(1 , n+1):
+#             fact *= i
+#         return fact
+
+# print(factorial(4))
+
+# With a given integral number n,
+# write a program to generate a dictionary that contains (i, i x i) such that is an integral number between 1 and n (both included).
+# and then the program should print the dictionary.Suppose the following input is supplied to the program: 8
+
+# def generate_dictsquares(num):
+#     base_dict = {}
+#     for i in range(1, num + 1):
+#         base_dict[f'{i}'] = i**2
+
+#     return base_dict
+
+# print(generate_dictsquares(8))
+
+# Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.
+# Suppose the following input is supplied to the program:34,67,55,33,12,98
+
+# numbers_to_be_processed = input('Give thy liege the numbers doth processing..')
+
+# def commas_to_list(numbers_to_be_processed):
+#     answer = []
+
+#     string_numbers = numbers_to_be_processed.split(",")
+
+#     for num in string_numbers:
+#         answer.append(int(num))
+#         # anoda_ans.append(int(num))
+
+#     anoda_ans = tuple(answer)
+
+#     return answer, anoda_ans
+
+
+# print(commas_to_list(numbers_to_be_processed))
+
+#     string_numbers = input_string.split(",")
+# integer_list = [int(num) for num in string_numbers]
+# print(integer_list)
+
+
+# input_shii = input('Give thy liege the numbers doth processing..')
+
+# string_no = input_shii.split(',')
+
+# int_list = [int(num) for num in string_no]
+
+# print(int_list)
+
+class daddyClass:
+
+    def console_string(self):
+        self.s = input()
+
+    def printupper(self):
+        print(self.s.upper())
+
+import random
+
+
+print(random.randint(5,55))
+print(random.random())
+print(random.choice((5, 55, 5555, 555)))
+list_44 = [5, 55, 555, 5555, 55555]
+random.shuffle(list_44)
+print(list_44)
