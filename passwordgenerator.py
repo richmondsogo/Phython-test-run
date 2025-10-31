@@ -16,7 +16,7 @@ base_list_characters = list("!@#$%^&*().")
 # #     part_three ="".join((random.choice(base_list_characters) for _ in range(length // 4)))
 # #     part_four = "".join((random.choice(base_list_lowercase) for _ in range(length // 4)))
 # #     return part_one+part_two+part_three+part_four
-    
+    11
 
 # base_list_lowercase = list("abcdefghijklmnopqrstuvwxyz")
 # base_list_uppercase = list("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
