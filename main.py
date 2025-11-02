@@ -1371,14 +1371,13 @@ import os
 # Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.
 # Suppose the following input is supplied to the program:34,67,55,33,12,98
 
-# numbers_to_be_processed = input('Give thy liege the numbers doth processing..')
+# numbers_to_be_processed = input('Give thy liege the numbers doth processing..').split(",")
 
 # def commas_to_list(numbers_to_be_processed):
 #     answer = []
 
-#     string_numbers = numbers_to_be_processed.split(",")
 
-#     for num in string_numbers:
+#     for num in numbers_to_be_processed:
 #         answer.append(int(num))
 #         # anoda_ans.append(int(num))
 
@@ -1482,3 +1481,49 @@ import os
 
 # arr = array('i', [1,2,3,4,5])
 # print(arr)
+# import math 
+
+# c = 50
+# h = 30
+
+# d = input(f"Please provide a comma seperated sequence to perform the operation on. ")
+
+
+# integer_list = [int(num) for num in d.split(',')]
+# print(integer_list)
+
+# test_ans = lambda integer: math.sqrt((2 * c * integer) / h)
+
+# answer = list(map(test_ans, integer_list))
+
+# rounded_answer = [round(num) for num in list(map(test_ans, integer_list))]
+
+# print(rounded_answer)
+
+# new = []
+# for i in answer:
+#     i_round = round(i)
+#     new.append(i_round)
+
+# print(new)
+# print(answer)
+
+# import pdb
+
+# # helps to debug a lot i think
+
+# def add(num_one, num_two):
+#     pdb.set_trace()
+#     t = 5^5
+#     return num_one+num_two
+
+# add(4, 'sdjha111d')
+
+
+'''FROM NOW ON CHECK BREAKTHEICE.PY FOR ALL GITHUB PYTHON EXERCISES. THANK YOU'''
+
+''' python input output'''
+
+my_txt = open('test.txt')
+
+print(my_txt)
