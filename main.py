@@ -1299,7 +1299,7 @@ import os
 #         t2 = time()
 #         print(f"took {t2-t1} seconds ")
 #         return result
-#     return wrapper
+# return wrapper
 
 # @function_timer
 # def fib(number):
@@ -1481,7 +1481,7 @@ import os
 
 # arr = array('i', [1,2,3,4,5])
 # print(arr)
-# import math 
+# import math
 
 # c = 50
 # h = 30
@@ -1525,13 +1525,48 @@ import os
 ''' python input output'''
 
 
-
 # obj = open(name, 'w')
 
 # obj.write('Amanda Herrera' )
 # obj.write('1660 Lupuve Loop')
 
 
-with open('mess.txt' , mode = 'r+') as miles:
-    text = miles.write(':)')
-    print(text)
+# with open('mess.txt' , mode = 'r+') as miles:
+#     text = miles.write(':)')
+#     # The above code is attempting to print the variable `text`, but it is missing the assignment of a
+#     # value to the `text` variable. This will result in a NameError when executed.
+#     print(text)
+
+
+import os
+import json
+
+# mess_var = open('mess.txt', 'a+')
+
+# mess_var.write("Leah Rios\nMelvin Blair")
+
+# print(mess_var.read())
+
+# mess_var.close()
+
+# with open("mess.txt", "a+") as mess_varto:
+#     mess_varto.write("\n Betty Mitchell")
+
+# os.rename("test.txt", "Alma Wood.txt")
+# The above code is renaming a file named "test.txt" to "Alma Wood.txt" using the `os.rename()`
+# function in Python.
+
+
+# os.remove("mess.txt")
+# The above code is attempting to remove a file named "Alma Wood.txt" using the `os.remove()` function
+# in Python.
+
+
+# with open("messy.json") as mess_vartoo:
+#     json_data = json.load(mess_vartoo)
+
+# print(json_data)
+# The above code is attempting to open a file named "messy.json", read its contents as JSON data, and then
+# print the JSON data.
+
+
