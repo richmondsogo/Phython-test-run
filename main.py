@@ -1524,6 +1524,14 @@ import os
 
 ''' python input output'''
 
-my_txt = open('test.txt')
 
-print(my_txt)
+
+# obj = open(name, 'w')
+
+# obj.write('Amanda Herrera' )
+# obj.write('1660 Lupuve Loop')
+
+
+with open('mess.txt' , mode = 'r+') as miles:
+    text = miles.write(':)')
+    print(text)

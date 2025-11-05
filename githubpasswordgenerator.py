@@ -64,9 +64,8 @@ def print_password_info(password: str) -> None:
 
 if __name__ == "__main__":
     try:
-        password = generate_password(177)
+
+        password = generate_password(int(input("How long do you want your password to be: ")))
         print_password_info(password)
     except ValueError as e:
         print(f"{Fore.RED}Error: {e}{Style.RESET_ALL}")
-        
-    
