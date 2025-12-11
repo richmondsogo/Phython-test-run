@@ -1570,3 +1570,127 @@ import json
 # print the JSON data.
 
 
+# The Python code below is attempting to open a file named 'wdassc.txt' in read mode. If the file is
+# found, it reads its contents and prints them. If the file is not found, it catches the
+# FileNotFoundError exception, prints "It does not exist.", and then re-raises the exception. If there
+# is any other input/output error, it catches the IOError exception, prints "IO error", and then
+# re-raises the exception.
+
+# try:
+#     with open('wdassc.txt', "r") as my_own:
+#         print(my_own.read())
+# except FileNotFoundError as err:
+#     print("It does not exist.")
+#     raise err
+# except IOError as err:
+#     print("IO error")
+#     raise err
+
+
+# The below code is demonstrating the use of the `re` module in Python for working with regular
+# expressions.
+
+# import re
+# import howdoi
+
+# string = "hehe boi boi boi"
+# _ = "boi" in string
+# print(_)
+
+
+# __ = re.search("boi", string)
+# print(__)
+# print(__.span())
+# print(__.start())
+# print(__.group())
+# print(__.end())
+
+# pattern = re.compile("boi")
+# pattern = re.compile("^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")
+
+
+# print(pattern.search(string))
+# print(pattern.findall(string))
+# print(pattern.fullmatch(string))
+
+
+# # example (no file change)
+# import re
+
+# pattern = re.compile(r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")
+
+# tests = ["hehe boi boi boi", "Ab1#abcd", "Ab1#abcdefg"]
+# for s in tests:
+#     print(
+#         s,
+#         "search->",
+#         bool(pattern.search(s)),
+#         "fullmatch->",
+#         bool(pattern.fullmatch(s)),
+#     )
+
+# Source - https://stackoverflow.com/q/2990654
+# Posted by jCuga
+# Retrieved 2025-11-15, License - CC BY-SA 2.5
+
+
+# password checker with regular expressions
+# import re
+# pattern = "^.*(?=.{8,})(?=.*)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$"
+# password = input("Enter string to test: ")
+# result = re.findall(pattern, password)
+# if (result):
+#     print ("Valid password")
+# else:
+#     print ("Password not valid")
+
+
+# def do_shii(num=0):
+#     """
+#     The function `do_shii` takes a number as input and returns the number plus 5, or prompts the user to
+#     enter a number if no input is provided.
+
+#     :param num: The `do_shii` function takes an optional parameter `num`, which has a default value of
+#     0. If a value is provided for `num`, it will try to convert it to an integer and then add 5 to it.
+#     If `num` is not provided, it will return, defaults to 0 (optional)
+#     :return: If the input `num` is a non-zero number, the function will return that number plus 5. If
+#     the input `num` is 0 or not provided, the function will return the string "please enter number". If
+#     there is a ValueError during the conversion of `num` to an integer, the function will return the
+#     error message.
+#     """
+#     try:
+#         if num:
+#             return int(num) + 5
+#         else:
+#             return "please enter number"
+#     except ValueError as err:
+#         return err
+
+
+import random
+
+answer = random.randint(1, 10)
+
+def guess_checker(guess, answer):
+    if 0 < guess < 11:
+        if guess == answer:
+            print("u are a genius!")
+            return True
+        else:
+            print("Nice try, wrong guess.")
+            return False
+    else:
+        print("hey bozo, I said 1-10")
+        return False
+
+
+if '__main__' == '__name__':
+    while True:
+        try:
+            guess = int(input("guess a number 1-10: "))
+        except ValueError:
+            print('please enter a number')
+            continue
+
+        if guess_checker(guess, answer):
+            break

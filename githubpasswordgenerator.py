@@ -69,3 +69,5 @@ if __name__ == "__main__":
         print_password_info(password)
     except ValueError as e:
         print(f"{Fore.RED}Error: {e}{Style.RESET_ALL}")
+
+
