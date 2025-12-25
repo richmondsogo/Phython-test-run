@@ -23,15 +23,22 @@ else:
 if not os.path.isdir(dest_folder):
     os.mkdir(dest_folder)
 
+# This block of code is responsible for iterating through the files in the source folder specified by
+# the user. For each file, it checks if the file has a ".jpg" or ".jpeg" extension. If the file is a
+# JPG or JPEG image, it opens the image using the PIL library, converts it to RGB format, and then
+# saves the converted image as a PNG file in the destination folder.
+num_processed_images = 0
 
-# This part of the script is iterating over the files in the source folder specified by the user. For
-# each file, it checks if the file has a ".jpg" or ".jpeg" extension using
-# `file.lower().endswith((".jpg", ".jpeg"))`. If the file is a JPG or JPEG image, it constructs the
-# source path by joining the source folder path with the file name.
 for file in os.listdir(source_folder):
-    if file.lower().endswith((".jpg", ".jpeg")):
+    root, ext = os.path.splitext(file)
+
+    if ext.lower() in [".jpg", ".jpeg"]:
         src_path = os.path.join(source_folder, file)
-        converted_img = file.lower().replace(".jpg", ".png").replace(".jpeg", ".png")
+        converted_img = root + ".png"
         dest_path = os.path.join(dest_folder, converted_img)
+
         with Image.open(src_path) as img:
             img.convert("RGB").save(dest_path)
+        num_processed_images += 1
+
+print(f"Total files converted: {num_processed_images}")
