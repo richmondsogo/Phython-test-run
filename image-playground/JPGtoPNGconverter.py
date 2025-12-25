@@ -8,7 +8,7 @@ from PIL import Image
 # message indicating the correct usage of the script.
 if len(sys.argv) != 3:
     sys.exit(
-        "Error: Something went wrong | Usage: python3 JPGtoPNGconverter.py <source_fwhaolder> <destination_folder>"
+        "Error: Something went wrong | Usage: python3 JPGtoPNGconverter.py <source_folder> <destination_folder>"
     )
 
 else:
@@ -16,6 +16,9 @@ else:
     source_folder = arg1
     dest_folder = arg2
 
+# Validate that the source folder exists
+if not os.path.isdir(source_folder):
+    sys.exit(f"Error: Source folder '{source_folder}' does not exist.")
 
 # This part of the script is checking if the destination folder specified by the user exists. If the
 # destination folder does not exist, it creates the folder using `os.mkdir(dest_folder)`. This ensures
@@ -37,8 +40,11 @@ for file in os.listdir(source_folder):
         converted_img = root + ".png"
         dest_path = os.path.join(dest_folder, converted_img)
 
-        with Image.open(src_path) as img:
-            img.convert("RGB").save(dest_path)
-        num_processed_images += 1
+        try:
+            with Image.open(src_path) as img:
+                img.convert("RGB").save(dest_path)
+            num_processed_images += 1
+        except Exception as e:
+            print(f"Error converting {file}: {e}")
 
 print(f"Total files converted: {num_processed_images}")
