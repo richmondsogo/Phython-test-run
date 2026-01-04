@@ -9,10 +9,11 @@ with open("dummy.pdf", "rb") as file:
     page = reader.pages[0]
     page.rotate(90)
 
-    # This part of the code snippet is creating a new PDF file named "tilt.pdf" and writing the
-    # modified page (rotated by 90 degrees clockwise) to this new PDF file.
-    writer = PyPDF2.PdfWriter()
-    writer.add_page(page)
-    with open("tilt.pdf", "wb") as new_file:
-        writer.write(new_file)
+# This part of the code snippet is creating a new PDF file named "tilt.pdf" and writing the
+# modified page (rotated by 90 degrees clockwise) to this new PDF file.
+writer = PyPDF2.PdfWriter()
+writer.add_page(page)
+with open("tilt.pdf", "wb") as new_file:
+    writer.write(new_file)
+        
 
