@@ -30,3 +30,5 @@ def pdf_merger(pdf_list):
 # variable as its argument. This function takes a list of PDF file paths as input and merges those PDF
 # files into a single PDF file named "super.pdf".
 pdf_merger(input)
+
+
