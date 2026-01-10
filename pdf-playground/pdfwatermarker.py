@@ -29,7 +29,6 @@ def pdf_watermarker(pdf_list):
         with open(out_name, "wb") as output_file:
             writer.write(output_file)
 
-
 # The `if __name__ == "__main__":` block in the provided Python script is a common Python idiom used
 # to check whether the script is being run as the main program or if it is being imported as a module
 # into another script.
