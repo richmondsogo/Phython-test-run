@@ -46,7 +46,97 @@ Hints:
 
 # end
 
-''''''
+"""
+Question 3
+
+    With a given integral number n, write a program to generate a dictionary that contains (i, i x i) such that is an integral number between 1 and n (both included).
+    and then the program should print the dictionary.Suppose the following input is supplied to the program: 8
+
+    Then, the output should be:
+    
+"""
+
+
+# while True:
+#     n = int(input("Enter a number greater than 1 "))
+
+#     while n < 1:
+#         print("I said a number greater than 1 dimwit")
+#         break
+
+#     else:
+#         operands = list(range(1, n + 1))  # this code is looping over the elemtens in operansd and addign them indto a dict
+#         d = dict()
+
+#         for i in operands:
+#             value = i*i
+#             d[i]= value
+#         print(d)
+#         break
+
+
+"""
+
+Question 4
+Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which contains every number.
+Suppose the following input is supplied to the program:
+34,67,55,33,12,98
+
+    Then, the output should be:
+
+['34', '67', '55', '33', '12', '98']
+('34', '67', '55', '33', '12', '98')
+
+
+"""
+# import sys
+
+# if len(sys.argv) > 1:
+#     values = sys.argv[1:]
+
+#     answer = []
+
+#     for i in values:
+#         string_numbers = i.split(",")
+#         for num in string_numbers:
+#             answer.append(num)
+
+#     print(answer)
+#     print(tuple(answer))
+
+# else:
+#     print("No arguments provided (apart from the script name).")
+
+
+"""
+Question 5
+
+    Define a class which has at least two methods:
+
+        getString: to get a string from console input
+        printString: to print the string in upper case.
+
+    Also please include simple test function to test the class methods.
+
+Hints:
+
+    Use init method to construct some parameters
+    
+
+"""
+class saySumm:
+
+    def getString(self):
+        self.s = input("put text you want to be upper here:")
+
+    def printString(self):
+        print((self.s).upper())
+
+
+test = saySumm()
+
+test.getString()
+test.printString()
 
 
 """Question 6
