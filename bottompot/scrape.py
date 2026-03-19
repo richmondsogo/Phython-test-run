@@ -42,4 +42,5 @@ for i in page_list:
         return sort_stories_by_votes(hn)
     output.extend(create_custom_hn(links, subtext))
 
-pprint.pprint(output)
+pprint.pprint(output, width=150, indent= 2)
+

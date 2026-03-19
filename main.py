@@ -1617,8 +1617,7 @@
 # # example (no file change)
 # import re
 
-# pattern = re.compile(r"^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$")
-
+#
 # tests = ["hehe boi boi boi", "Ab1#abcd", "Ab1#abcdefg"]
 # for s in tests:
 #     print(
@@ -1695,6 +1694,138 @@
 #         if guess_checker(guess, answer):
 #             break
 
-for i, char in enumerate(list(range(100))):
-    a = (i, char)
-print(a)
+# for i, char in enumerate(list(range(100))):
+#     a = (i, char)
+# print(a)
+
+# def repeat(word, n):
+#     print(word * n)
+
+# spam = 'Spam, '
+
+# def first_two_lines():
+#     repeat(spam, 4)
+#     repeat(spam, 4)
+
+# def last_three_lines():
+#     repeat(spam, 2)
+#     print('(Lovely Spam, Wonderful Spam!)')
+#     repeat(spam, 2)
+
+# def print_verse():
+#     first_two_lines()
+#     last_three_lines()
+
+# def print_n_verses(n):
+#     for i in range(n):
+#         print('Verse', i)
+#         print_verse()
+#         print()
+
+
+# print_n_verses(7)
+
+# def print_twice(anything):
+#     print(anything)
+#     print(anything)
+
+# def cat_twice(part1, part2):
+#     cat = part1 + part2
+#     print_twice(cat)
+
+# line1 = "Always look on the "
+# line2 = "bright side of life."
+# cat_twice(line1, line2)
+
+# def print_right(text):
+#     try:
+#         spaces = ' ' * (40 - len(text))
+
+#         print(spaces +  text)
+#     except ValueError as am:
+#         print('The text you used is too damn long')
+#         raise am
+
+# print_right('usually')
+
+
+# def triangle(str, n):
+#     for i in range(n+1):
+#         print(str * i, end='\n')
+
+
+# triangle("L", 5)
+
+
+# def rectangle(str,width, height):
+#     """Produces a rectangle of the given height using the contents of the given string
+
+#     str: string from which rectangle is to be made
+#     width: width of rectangle
+#     height: height of rectangle
+
+#     """
+
+#     for i in range(height):
+#         print(str * width, end='\n')
+
+# rectangle("H", 5, 4)
+
+
+# def all_lines(n):
+#     ''' Prints all lines in the bottle of beer song
+
+#     n: number of beers on the wall
+#     '''
+
+#     print(str(n) + " bottles of beer on the wall,")
+#     print(str(n) + " bottles of beer")
+#     print("Take one down, pass it around,")
+#     print(str(n - 1 )+ " bottles of beer on the wall.")
+#     print()
+
+
+# for n in range(99, 0, -1):
+#     all_lines(n)
+
+# def countdown(n):
+#     """This unction counts down to 0 and blasts off"""
+#     if n <= 0:
+#         print('Blastoff!')
+#     else:
+#         print(n)
+#         countdown(n-1)
+
+
+# countdown(996)
+
+# from time import time
+# from time import localtime
+
+
+# now = time()
+
+# print(now)
+
+# minutes = now // 60
+# hours = minutes // 60
+# days = hours// 24
+
+# print(days)
+
+# hehe = localtime()
+
+# print(hehe)
+
+
+def is_triangle(a, b, c):
+    if a > b + c or b > a + c or c > a + b:
+        print("No")
+        ans = "No"
+    else:
+        print("Yes")
+        ans = "Yes"
+    return ans
+
+
+is_triangle(7, 1, 4)
