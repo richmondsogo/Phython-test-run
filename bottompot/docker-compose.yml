@@ -1,0 +1,11 @@
+services:
+  scraper:
+    build: .
+    container_name: bottom_pot_scraper
+    environment:
+      - PYTHONUNBUFFERED=1
+    # Mount src so you can edit code without rebuilding the image
+    volumes:
+      - .:/app
+    # network_mode host gives Chromium direct internet access inside Docker
+    network_mode: host

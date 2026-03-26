@@ -124,19 +124,19 @@ Hints:
     
 
 """
-class saySumm:
+# class saySumm:
 
-    def getString(self):
-        self.s = input("put text you want to be upper here:")
+#     def getString(self):
+#         self.s = input("put text you want to be upper here:")
 
-    def printString(self):
-        print((self.s).upper())
+#     def printString(self):
+#         print((self.s).upper())
 
 
-test = saySumm()
+# test = saySumm()
 
-test.getString()
-test.printString()
+# test.getString()
+# test.printString()
 
 
 """Question 6
@@ -206,3 +206,17 @@ Hints:
 # print(roundedup_answer)
 
 # End
+
+
+# raw_input = input("Enter a comma separated string of words ").split(',')
+# answer = sorted(raw_input)
+
+# print(",".join(answer))
+
+import sys
+
+# data = sys.stdin.read()  # Reads until EOF
+
+
+data = sys.argv[1:]
+print(data)
