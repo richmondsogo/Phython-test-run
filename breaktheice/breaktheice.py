@@ -213,14 +213,15 @@ Hints:
 
 # print(",".join(answer))
 
-import sys
-
 # data = sys.stdin.read()  # Reads until EOF
 
 
-data = sys.argv[1:]
-print(data)
+# Question 9
+# Question:
 
+#     Write a program that accepts sequence of lines as input and prints the lines after making all characters in the sentence capitalized.
+
+#     Suppose the following input is supplied to the program:
 
 lines = []
 
@@ -228,15 +229,38 @@ lines = []
 # Each string entered by the user is then converted to uppercase using the `upper()` method and added
 # to the `lines` list. If the user enters an empty string (by pressing Enter without typing anything),
 # the loop breaks and the program moves on to the next part.
-while True:
-    try:
-        s = input("Enter a string to make it upper case ")
-        if s:
-            lines.append(s.upper())
-        else:
-            break
-    except EOFError:
-        break
 
-for sentence in lines:
-    print(sentence)
+# while True:
+#     try:
+#         s = input("Enter a string to make it upper case ")
+#         if s:
+#             lines.append(s.upper())
+#         else:
+#             break
+#     except EOFError:
+#         break
+
+# for sentence in lines:
+#     print(sentence)
+
+
+# Question 10
+# Question
+
+#     Write a program that accepts a sequence of whitespace separated words as 
+#     input and prints the words after removing all duplicate words and sorting them alphanumerically.
+
+#     Suppose the following input is supplied to the program:
+
+# hello world and practice makes perfect and hello world again
+
+#     Then, the output should be:
+
+# again and hello makes perfect practice world
+
+
+raw_input = input("Enter a space separated string of words ").split()
+answer = sorted(set(raw_input))
+
+final_answer = " ".join(answer)
+print(final_answer)
