@@ -220,3 +220,23 @@ import sys
 
 data = sys.argv[1:]
 print(data)
+
+
+lines = []
+
+# This code snippet is creating an infinite loop that continuously prompts the user to enter a string.
+# Each string entered by the user is then converted to uppercase using the `upper()` method and added
+# to the `lines` list. If the user enters an empty string (by pressing Enter without typing anything),
+# the loop breaks and the program moves on to the next part.
+while True:
+    try:
+        s = input("Enter a string to make it upper case ")
+        if s:
+            lines.append(s.upper())
+        else:
+            break
+    except EOFError:
+        break
+
+for sentence in lines:
+    print(sentence)
