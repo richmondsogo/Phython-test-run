@@ -247,7 +247,7 @@ lines = []
 # Question 10
 # Question
 
-#     Write a program that accepts a sequence of whitespace separated words as 
+#     Write a program that accepts a sequence of whitespace separated words as
 #     input and prints the words after removing all duplicate words and sorting them alphanumerically.
 
 #     Suppose the following input is supplied to the program:
@@ -270,7 +270,7 @@ lines = []
 # Question
 
 #     Write a program which accepts a sequence of comma separated 4 digit binary numbers
-#     as its input and then check whether they are divisible by 5 or not. The numbers that 
+#     as its input and then check whether they are divisible by 5 or not. The numbers that
 #     are divisible by 5 are to be printed in a comma separated sequence.
 
 #     Example:
@@ -288,3 +288,8 @@ print(type(raw_input))
 answer = [num for num in raw_input if int(num, 2) % 5 == 0]
 print ("".join(answer))
 
+answer = []
+for num in raw_input:
+    if int(num, 2) % 5 == 0:
+        answer.append(num)
+print(",".join(answer))
