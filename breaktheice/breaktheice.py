@@ -259,8 +259,32 @@ lines = []
 # again and hello makes perfect practice world
 
 
-raw_input = input("Enter a space separated string of words ").split()
-answer = sorted(set(raw_input))
+# raw_input = input("Enter a space separated string of words ").split()
+# answer = sorted(set(raw_input))
 
-final_answer = " ".join(answer)
-print(final_answer)
+# final_answer = " ".join(answer)
+# print(final_answer)
+
+
+# Question 11
+# Question
+
+#     Write a program which accepts a sequence of comma separated 4 digit binary numbers
+#     as its input and then check whether they are divisible by 5 or not. The numbers that 
+#     are divisible by 5 are to be printed in a comma separated sequence.
+
+#     Example:
+
+# 0100,0011,1010,1001
+
+#     Then the output should be:
+
+# 1010
+
+
+raw_input = input("Enter a comma separated string of 4 digit binary numbers ").split(",")
+
+print(type(raw_input))
+answer = [num for num in raw_input if int(num, 2) % 5 == 0]
+print ("".join(answer))
+
