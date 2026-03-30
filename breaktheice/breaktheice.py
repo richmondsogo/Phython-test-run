@@ -282,14 +282,49 @@ lines = []
 # 1010
 
 
-raw_input = input("Enter a comma separated string of 4 digit binary numbers ").split(",")
+# raw_input = input("Enter a comma separated string of 4 digit binary numbers ").split(",")
 
-print(type(raw_input))
-answer = [num for num in raw_input if int(num, 2) % 5 == 0]
-print ("".join(answer))
+# print(type(raw_input))
+# answer = [num for num in raw_input if int(num, 2) % 5 == 0]
+# print ("".join(answer))
 
-answer = []
-for num in raw_input:
-    if int(num, 2) % 5 == 0:
-        answer.append(num)
-print(",".join(answer))
+# answer = []
+# for num in raw_input:
+#     if int(num, 2) % 5 == 0:
+#         answer.append(num)
+# print(",".join(answer))
+
+
+# Question 12
+# Question:
+
+#     Write a program, which will find all such numbers between 1000 and 3000 (both included)
+#     such that each digit of the number is an even number.The numbers obtained should be printed in a
+#     comma-separated sequence on a single line.
+
+# Hints:
+
+#     In case of input data being supplied to the question, it should be assumed to be a console input.
+
+# input = list(range(1000,3001))
+
+# for num in input:
+#     if
+
+# ans = [num for num in input if num %2 == 0]
+# # print (ans)
+# final = []
+
+
+# for num in ans:
+#     digit1 = int(str(num)[0])
+#     digit2 = int(str(num)[1])
+#     digit3 = int(str(num)[2])
+#     digit4 = int(str(num)[3])
+#     if digit1 % 2 == 0 and digit2 % 2 == 0 and digit3 % 2 == 0 and digit4 % 2 == 0:
+#         final.append(num)
+#     else:
+#         pass
+
+
+# print(",".join(map(str, final)))
