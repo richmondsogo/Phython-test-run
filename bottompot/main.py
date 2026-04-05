@@ -7,9 +7,9 @@ from serp_scraper import SERPScraper
 
 
 async def main():
-    params = SearchParams(
+    params = SearchParams(       # edit this section to change the parameters of your search     
         job_title="python intern",
-        remote=True,
+        remote=None,
         days_back=7,
     )
 
