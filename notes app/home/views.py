@@ -10,4 +10,4 @@ def home(request):
 
 @login_required(login_url='/admin')
 def authorizer(request):
-    return render(request, 'home/authorized.html', {})
+    return render(request, 'home/authorized.html', {}) 

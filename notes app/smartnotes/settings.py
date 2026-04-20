@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     
     
     # Local apps
-    "home"   
+    "home",
+    "notes",
 ]
 
 MIDDLEWARE = [
