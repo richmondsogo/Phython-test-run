@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Not Found</title>
+    <style>
+        body { font-family: system-ui, sans-serif; text-align: center; padding: 50px; background-color: #f9fafb; color: #374151; }
+        .error-card { max-width: 400px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        h1 { color: #ef4444; margin-bottom: 8px; font-size: 2rem; }
+        p { color: #6b7280; font-size: 1.1rem; line-height: 1.5; }
+        .badge { background-color: #f3f4f6; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-weight: bold; color: #1f2937; }
+        a { display: inline-block; margin-top: 20px; color: #2563eb; text-decoration: none; font-weight: 500; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <div class="error-card">
+        <h1> Note Not Found</h1>
+        <p>Sorry, we could not find a note with the ID <span class="badge">#{{ note_id }}</span>.</p>
+        <p>It may have been deleted, or you might have clicked a broken link.</p>
+        <a href="/">← Go Back Home</a>
+    </div>
+
+</body>
+</html>
